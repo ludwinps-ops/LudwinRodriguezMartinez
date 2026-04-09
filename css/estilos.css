@@ -22,10 +22,10 @@ nav{
     padding: 10px;
 
 }
-nav ul{
+nav ol{
     display: flex;
 }
-nav ul li a{
+nav ol li a{
     text-decoration: none;
 color: white;
 }
