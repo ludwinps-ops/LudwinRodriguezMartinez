@@ -24,7 +24,7 @@ nav{
 }
 nav ol{
     display: flex;
-    flex-grow: ;
+    flex-grow:1;
 }
 nav ol li a{
     text-decoration: none;
