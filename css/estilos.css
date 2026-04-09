@@ -24,7 +24,7 @@ nav{
 }
 nav ol{
     display: flex;
-    gap: 0px 5px
+    gap: 0px 25px
 }
 nav ol li a{
     text-decoration: none;
