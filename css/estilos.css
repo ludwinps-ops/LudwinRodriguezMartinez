@@ -23,8 +23,8 @@ nav{
 
 }
 nav ol{
-    justify-content: space-between;
     display: flex;
+    gap: 20px;
 }
 nav ol li a{
     text-decoration: none;
