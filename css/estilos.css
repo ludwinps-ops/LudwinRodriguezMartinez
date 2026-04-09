@@ -24,9 +24,9 @@ nav{
 }
 nav ol{
     display: flex;
+    flex-grow: ;
 }
 nav ol li a{
     text-decoration: none;
     color: white;
-    gap: 100px
 }
