@@ -4,12 +4,12 @@ console.log("Hola mundo desde JavaScript");
 alert("Hola Mundo. Esto es una Alerta");
 
 function cambiarCarita(){
-    document.getElementById("carita").src="images/sad.png";
-     document.getElementById("logoSenati").src="images/senati3.png";
+    document.getElementById("carita").src="imagenens/triste.png";
+     document.getElementById("logoSenati").src="imagenes/logo.png";
     alert("Por que tas triste");
 }
 function feliz(){
-    document.getElementById("carita").src="images/happy.jpg";
+    document.getElementById("carita").src="imagenes/feliz.png";
     document.getElementById("TituloJS").textContent="Ejemplo de Caritas";
 }
 function nombresNav(){
