@@ -4,7 +4,7 @@ console.log("Hola mundo desde JavaScript");
 alert("Hola Mundo. Esto es una Alerta");
 
 function cambiarCarita(){
-    document.getElementById("carita").src="imagenens/triste.png";
+    document.getElementById("carita").src="imagenes/triste.png";
      document.getElementById("logoSenati").src="imagenes/logo.png";
     alert("Por que tas triste");
 }
