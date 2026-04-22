@@ -19,3 +19,12 @@ function nombresNav(){
     document.getElementById("m5").textContent="Quinta Página";
     document.getElementById("m6").textContent="Sexto Página";
 }
+function nombesNav2(){
+    document.getElementById("m1").textContent="Inicio";
+    document.getElementById("m2").textContent="Listas";
+    document.getElementById("m3").textContent="Tablas";
+    document.getElementById("m4").textContent="Ejemplos de JS";
+    document.getElementById("m5").textContent="Tareas de JS";
+    document.getElementById("m6").textContent="Formularios";
+    document.getElementById("m7").textContent="Personal";
+}
