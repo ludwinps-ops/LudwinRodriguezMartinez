@@ -59,6 +59,9 @@ article ul, ol, dl, li{
     padding: 10px;
     margin: 10px;
 }
+article dl dt{
+    font-weight: bold;
+}
 article img{
     width: 500px;
 }
