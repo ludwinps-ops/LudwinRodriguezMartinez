@@ -12,5 +12,5 @@ function eje9(){
 }
 
 function notoqs(){
-    alert("Te dije que no toques.")
+    alert("Te dije que no toques.");
 }
