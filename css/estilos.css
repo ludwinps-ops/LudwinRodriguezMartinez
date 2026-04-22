@@ -62,6 +62,10 @@ article ul, ol, dl, li{
 article dl dt{
     font-weight: bold;
 }
+article dl dd{
+    font-weight: lighter;
+    margin-left: 10px;
+}
 article img{
     width: 500px;
 }
