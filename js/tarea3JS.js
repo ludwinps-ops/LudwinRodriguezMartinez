@@ -22,12 +22,10 @@ function  murky(){
 
 function evol(){
     document.getElementById("char1").src="imagenes/charmeleon.png";
-    document.getElementById("char1").style.width = "350px";
     alert("Tu charmander a evolucionado a charmeleon");
 }
 
 function evol2(){
     document.getElementById("char1").src="imagenes/charizard.png";
-    document.getElementById("char1").style.width = "500px";
     alert("Tu charmeleon a evolucionado a un charizard");
 }
