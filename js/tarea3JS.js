@@ -3,7 +3,7 @@ console.log("Entrando a las Tareas de JS");
 //alert nos sirve para mostrarle un alert al usuario
 alert("Estas entrando a las tareas de JS");
 
-function ejercicio09(){
+function eje9(){
     let distancia = 2;
     let adicional = 3
     let tarifa = 10;
