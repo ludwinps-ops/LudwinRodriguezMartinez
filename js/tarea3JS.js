@@ -20,4 +20,14 @@ function  murky(){
     alert("Mira salio murky");
 }
 
-function
+function evol(){
+    document.getElementById("char1").src="imagenes/charmeleon.png";
+    document.getElementById("char1").style.width = "100px";
+    alert("Tu charmander a evolucionado a charmeleon");
+}
+
+function evol2(){
+    document.getElementById("char1").src="imagenes/charizard.png";
+    document.getElementById("char1").style.width = "170px";
+    alert("Tu charmeleon a evolucionado a un charizard");
+}
