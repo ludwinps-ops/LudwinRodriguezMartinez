@@ -10,3 +10,5 @@ function eje9(){
     let total = (distancia*adicional)+tarifa;
     alert("Recorriste "+distancia+"Km su total a pagar es: S/."+total);
 }
+
+function

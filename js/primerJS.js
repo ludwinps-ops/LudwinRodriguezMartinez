@@ -35,7 +35,7 @@ function nombresNav2(){
 function cambiarTitulo(){
     document.getElementById("titulo").textContent="Practicando JS";
     document.getElementById("titulo").style.color="#290c60" 
-    document.getElementById("logoSenati").src="images/logo.png";
+    document.getElementById("logoSenati").src="imagenes/logo.png";
     document.getElementById("encabezado").style.background="#89cce2"
 }
 
