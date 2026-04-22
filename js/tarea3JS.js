@@ -8,5 +8,5 @@ function eje9(){
     let adicional = 3
     let tarifa = 10;
     let total = (distancia*adicional)+tarifa;
-    alert("Recorriste "+distancia+"Km su total a pagar es: "+total);
+    alert("Recorriste "+distancia+"Km su total a pagar es: S/."+total);
 }
