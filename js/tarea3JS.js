@@ -11,4 +11,6 @@ function eje9(){
     alert("Recorriste "+distancia+"Km su total a pagar es: S/."+total);
 }
 
-function
+function notoqs(){
+    alert("Te dije que no toques.")
+}
