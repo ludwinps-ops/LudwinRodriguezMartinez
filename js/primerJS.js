@@ -17,7 +17,9 @@ function nombresNav(){
     document.getElementById("m3").textContent="Tercera Página";
     document.getElementById("m4").textContent="Cuarta Página";
     document.getElementById("m5").textContent="Quinta Página";
-    document.getElementById("m6").textContent="Sexto Página";
+    document.getElementById("m6").textContent="Sexta Página";
+    document.getElementById("m7").textContent="Septima Pagina";
+    document.getElementById("m8").textContent="Octava Pagina";
 }
 function nombresNav2(){
     document.getElementById("m1").textContent="Inicio";
@@ -27,4 +29,5 @@ function nombresNav2(){
     document.getElementById("m5").textContent="Tareas de JS";
     document.getElementById("m6").textContent="Formularios";
     document.getElementById("m7").textContent="Personal";
+    document.getElementById("m8").textContent="Entregable";
 }
