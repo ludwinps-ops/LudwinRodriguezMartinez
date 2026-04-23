@@ -22,11 +22,15 @@ function  murky(){
 
 function evol(){
     document.getElementById("char1").src="imagenes/charmeleon.png";
+    document.getElementById("char1").style.width="600px";
+    document.getElementById("pkmn").style.background= "#995233";
     alert("Tu charmander a evolucionado a charmeleon");
 }
 
 function evol2(){
     document.getElementById("char1").src="imagenes/charizard.png";
+    document.getElementById("char1").style.width="900px";
+    document.getElementById("pkmn").style.background= "#C05020";
     alert("Tu charmeleon a evolucionado a un charizard");
 }
 
@@ -50,5 +54,10 @@ function subrayar(){
     document.getElementById("m8").style.textDecoration="underline";
     document.getElementById("m8").style.fontStyle="italic";
     alert("El titulo y menu se han subrayado y puesto en cursiva");
+}
+
+function reset(){
+    location.reload();
+    alert("La pagina se ha reiniciado");
 }
 
