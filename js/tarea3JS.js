@@ -29,3 +29,26 @@ function evol2(){
     document.getElementById("char1").src="imagenes/charizard.png";
     alert("Tu charmeleon a evolucionado a un charizard");
 }
+
+function subrayar(){
+    document.getElementById("titulo5").style.textDecoration="underline";
+    document.getElementById("titulo5").style.fontStyle="italic";
+    document.getElementById("m1").style.textDecoration="underline";
+    document.getElementById("m1").style.fontStyle="italic";
+    document.getElementById("m2").style.textDecoration="underline";
+    document.getElementById("m2").style.fontStyle="italic";
+    document.getElementById("m3").style.textDecoration="underline";
+    document.getElementById("m3").style.fontStyle="italic";
+    document.getElementById("m4").style.textDecoration="underline";
+    document.getElementById("m4").style .fontStyle="italic";
+    document.getElementById("m5").style.textDecoration="underline";
+    document.getElementById("m5").style.fontStyle="italic";
+    document.getElementById("m6").style.textDecoration="underline";
+    document.getElementById("m6").style.fontStyle="italic";
+    document.getElementById("m7").style.textDecoration="underline";
+    document.getElementById("m7").style.fontStyle="italic";
+    document.getElementById("m8").style.textDecoration="underline";
+    document.getElementById("m8").style.fontStyle="italic";
+    alert("El titulo y menu se han subrayado y puesto en cursiva");
+}
+
