@@ -61,3 +61,85 @@ function reset(){
     alert("La pagina se ha reiniciado");
 }
 
+let nivel = 1;
+
+function evolucion(){
+    if (nivel == 3){
+        alert("Tu charmander esta evolucionando a charmeleon");
+        document.getElementById("char1").src="imagenes/charmeleon.png";
+        document.getElementById("char1").style.width="600px";
+        document.getElementById("pkmn").style.background= "#995233";
+    }
+    if (nivel == 6){
+        alert("Tu charmeleon esta evolucionando a charizard");
+        document.getElementById("char1").src="imagenes/charizard.png";
+        document.getElementById("char1").style.width="900px";
+        document.getElementById("pkmn").style.background= "#C05020";
+    }
+}
+
+function pregunta(){
+    if (nivel == 1){
+        let p1= prompt("Cual es el tipo de charmander?");
+        if (p1.toLowerCase() == "fuego"||p1.toLowerCase() == "Fuego"){
+            alert("Correcto Has subido de nivel");
+            nivel++;
+            document.getElementById("nivel").innerText = "Nivel: " + nivel;
+            evolucion();
+            return;
+        } else {
+            alert("Respuesta incorrecta, intenta de nuevo");
+        }
+    }
+    if (nivel == 2){
+        let p2= prompt("Cuanto es 5 x 4?");
+        if (p2 == 20){
+            alert("Correcto Has subido de nivel");
+            nivel++;
+            document.getElementById("nivel").innerText = "Nivel: " + nivel;
+            evolucion();
+            return;
+        } else {
+            alert("Respuesta incorrecta, intenta de nuevo");
+        }
+    }
+    if (nivel == 3){
+        let p3= prompt("Cual es la capital de Peru?");
+        if (p3.toLowerCase() == "lima" || p3.toLowerCase() == "Lima"){
+            alert("Correcto Has subido de nivel");
+            nivel++;
+            document.getElementById("nivel").innerText = "Nivel: " + nivel;
+            evolucion();
+            return;
+        } else {
+            alert("Respuesta incorrecta, intenta de nuevo");
+        }
+    }
+    if (nivel == 4){
+        let p4= prompt("En que continente se encuentra Peru?");
+        if (p4.toLowerCase() == "america" || p4.toLowerCase() == "América"){
+            alert("Correcto Has subido de nivel");
+            nivel++;
+            document.getElementById("nivel").innerText = "Nivel: " + nivel;
+            evolucion();
+            return;
+        } else {
+            alert("Respuesta incorrecta, intenta de nuevo");
+        }
+    }
+    if (nivel == 5){
+        let p5= prompt("Complete la frase: Camaron que se duerme se lo lleva la ____");
+        if (p5.toLowerCase() == "corriente" || p5.toLowerCase() == "Corriente"){
+            alert("Correcto Has subido de nivel");
+            nivel++;
+            document.getElementById("nivel").innerText = "Nivel: " + nivel;
+            evolucion();
+            return;
+        } else {
+            alert("Respuesta incorrecta, intenta de nuevo");
+        }
+    }
+    if (nivel == 6){
+        alert("Felicidades has respondido todas las preguntas y tu charmander a evolucionado a charizard");
+    }
+    }
