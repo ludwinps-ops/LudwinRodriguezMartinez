@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- Barra de Navegación -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">EcoMarket</a>
@@ -34,7 +33,6 @@
   </div>
 </nav>
 
-<!-- Carrito -->
 <section class="py-5">
   <div class="container">
     <h2 class="fw-bold mb-4"><i class="bi bi-cart3"></i> Mi Carrito</h2>
@@ -65,7 +63,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="bg-dark text-white pt-5 pb-3 mt-5">
   <div class="container">
     <div class="row">
@@ -100,14 +97,14 @@
 <script>
   function mostrarCarrito() {
     const carrito = obtenerCarrito();
-    const contenedor = document.getElementById('itemsCarrito');
+    const contenedor = document.getElementById("itemsCarrito");
     if(carrito.length === 0) {
-      contenedor.innerHTML = '<p class="text-muted text-center py-5">Tu carrito está vacío</p>';
-      document.getElementById('totalCarrito').innerText = 'S/ 0.00';
+      contenedor.innerHTML = "<p class=\"text-muted text-center py-5\">Tu carrito está vacío</p>";
+      document.getElementById("totalCarrito").innerText = "S/ 0.00";
       return;
     }
     let total = 0;
-    contenedor.innerHTML = '<ul class="list-group list-group-flush">' + carrito.map(item => {
+    contenedor.innerHTML = "<ul class=\"list-group list-group-flush\">" + carrito.map(item => {
       total += item.precio * item.cantidad;
       return `
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -116,14 +113,20 @@
           <button class="btn btn-sm btn-danger" onclick="eliminarDelCarrito(${item.id})"><i class="bi bi-trash"></i></button></div>
         </li>
       `;
-    }).join('') + '</ul>';
-    document.getElementById('totalCarrito').innerText = `S/ ${total.toFixed(2)}`;
+    }).join("") + "</ul>";
+    document.getElementById("totalCarrito").innerText = `S/ ${total.toFixed(2)}`;
   }
   
-  document.getElementById('botonVaciar')?.addEventListener('click', () => { vaciarCarrito(); mostrarCarrito(); actualizarContadorCarrito(); });
-  document.getElementById('botonPagar')?.addEventListener('click', () => {
-    if(obtenerCarrito().length === 0) alert('Carrito vacío');
-    else { alert('¡Compra realizada! Gracias.'); vaciarCarrito(); mostrarCarrito(); actualizarContadorCarrito(); }
+  document.getElementById("botonVaciar")?.addEventListener("click", () => { vaciarCarrito(); mostrarCarrito(); actualizarContadorCarrito(); });
+  document.getElementById("botonPagar")?.addEventListener("click", () => {
+    if(obtenerCarrito().length === 0) {
+      alert("Carrito vacío");
+    } else {
+      alert("Disculpe, actualmente no tenemos backend.");
+      vaciarCarrito();
+      mostrarCarrito();
+      actualizarContadorCarrito();
+    }
   });
   
   mostrarCarrito();
