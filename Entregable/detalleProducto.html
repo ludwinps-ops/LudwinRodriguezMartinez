@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoMarket | Detalle del Producto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">EcoMarket</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#barraNavegacion">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="barraNavegacion">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="libroReclamaciones.html">Libro de Reclamaciones</a></li>
+      </ul>
+      <a href="carrito.html" class="btn btn-outline-success position-relative">
+        <i class="bi bi-cart3"></i>
+        <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Detalle del Producto -->
+<section class="py-5">
+  <div class="container">
+    <div class="row" id="detalleProducto"></div>
+  </div>
+</section>
+
+<!-- Productos Relacionados -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">Productos relacionados</h3>
+    <div class="row g-4" id="productosRelacionados"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>EcoMarket</h5>
+        <p>Productos orgánicos de alta calidad, promoviendo la agricultura sostenible en Perú.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Enlaces del curso</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none" target="_blank">Mi primera pagina web</a></li>
+          <li class="mb-2"><a href="https://senati.blackboard.com/" class="text-white-50 text-decoration-none" target="_blank">Blackboard</a></li>
+          <li class="mb-2"><a href="https://github.com/ludwinps-ops/LudwinRodriguezMartinez" class="text-white-50 text-decoration-none" target="_blank">Mi Repositorio</a></li>
+          <li class="mb-2"><a href="https://arnoldbgq.github.io/instructorGonzalez/" class="text-white-50 text-decoration-none" target="_blank">Pagina del Instructor</a></li>
+          <li class="mb-2"><a href="https://github.com/arnoldbgq/instructorGonzalez" class="text-white-50 text-decoration-none" target="_blank">Repositorio del instructor</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <p><i class="bi bi-geo-alt"></i> Puno, Perú</p>
+        <p><i class="bi bi-envelope"></i> info@ecomarket.pe</p>
+        <p><i class="bi bi-phone"></i> +51 987 654 321</p>
+      </div>
+    </div>
+    <hr class="mt-4">
+    <p class="text-center text-white-50">© 2026 EcoMarket - Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  const idProducto = parseInt(new URLSearchParams(location.search).get('id'));
+  
+  function cargarDetalle() {
+    const p = productos.find(p => p.id === idProducto);
+    if(!p){ location.href='productos.html'; return; }
+    document.getElementById('detalleProducto').innerHTML = `
+      <div class="col-md-6"><img src="${p.imagen}" class="img-fluid rounded shadow" alt="${p.nombre}"></div>
+      <div class="col-md-6">
+        <h1 class="display-5 fw-bold">${p.nombre}</h1>
+        <p class="text-success fs-3 fw-bold">S/ ${p.precio.toFixed(2)} <span class="fs-6">/${p.unidad}</span></p>
+        <p><strong>Origen:</strong> ${p.origen}</p>
+        <p><strong>Stock:</strong> ${p.stock} ${p.unidad}</p>
+        <p><strong>Descripción:</strong> ${p.descripcion}</p>
+        <div class="mt-4">
+          <label class="form-label">Cantidad (${p.unidad}):</label>
+          <input type="number" id="cantidad" class="form-control w-25 mb-3" value="1" min="1" max="${p.stock}" step="0.5">
+          <button class="btn btn-success btn-lg w-100" onclick="agregarAlCarrito(${p.id}, parseFloat(document.getElementById('cantidad').value))">Agregar al carrito</button>
+        </div>
+      </div>
+    `;
+    const relacionados = productos.filter(p => p.id !== idProducto).slice(0,4);
+    document.getElementById('productosRelacionados').innerHTML = relacionados.map(r => `
+      <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+          <img src="${r.imagen}" class="card-img-top" style="height:150px;object-fit:cover">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">${r.nombre}</h6>
+            <p class="text-success fw-bold">S/ ${r.precio.toFixed(2)} <small>/${r.unidad}</small></p>
+            <button class="btn btn-sm btn-success w-100 mb-2" onclick="agregarAlCarrito(${r.id})">Agregar</button>
+            <a href="detalleProducto.html?id=${r.id}" class="btn btn-sm btn-outline-success w-100">Ver</a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+  
+  cargarDetalle();
+  actualizarContadorCarrito();
+</script>
+</body>
+</html>
