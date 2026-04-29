@@ -3,50 +3,50 @@ const productos = [];
 
 // FRUTAS 
 const frutas = [
-  { id: 1, nombre: "Manzana Orgánica", precio: 8.50, unidad: "kg", categoria: "frutas", descripcion: "Manzanas dulces y crujientes, cultivadas sin pesticidas.", origen: "Cajamarca", stock: 50, imagen: "imagenes/manzana.png" },
-  { id: 2, nombre: "Plátano de seda", precio: 4.50, unidad: "kg", categoria: "frutas", descripcion: "Plátanos pequeños, dulces y altos en potasio.", origen: "Tumbes", stock: 120, imagen: "imagenes/platano.png" },
-  { id: 5, nombre: "Palta Hass", precio: 12.00, unidad: "kg", categoria: "frutas", descripcion: "Paltas cremosas perfectas para ensaladas.", origen: "Lima", stock: 30, imagen: "imagenes/palta.png" },
-  { id: 6, nombre: "Fresa orgánica", precio: 18.00, unidad: "kg", categoria: "frutas", descripcion: "Fresas rojas y jugosas, cosecha reciente.", origen: "Cajamarca", stock: 45, imagen: "imagenes/fresa.png" },
-  { id: 8, nombre: "Limón sutil", precio: 4.00, unidad: "kg", categoria: "frutas", descripcion: "Limones jugosos, ideales para bebidas y comidas.", origen: "Piura", stock: 150, imagen: "imagenes/limon.png" },
-  { id: 10, nombre: "Naranja dulce", precio: 5.50, unidad: "kg", categoria: "frutas", descripcion: "Naranjas jugosas, llenas de vitamina C.", origen: "Junín", stock: 100, imagen: "imagenes/naranja.png" },
-  { id: 14, nombre: "Kiwi orgánico", precio: 15.00, unidad: "kg", categoria: "frutas", descripcion: "Kiwis dulces y ácidos, llenos de vitamina C.", origen: "Cajamarca", stock: 40, imagen: "imagenes/kiwi.png" },
-  { id: 15, nombre: "Uva borgoña", precio: 12.00, unidad: "kg", categoria: "frutas", descripcion: "Uvas dulces, perfectas para comer frescas o en postres.", origen: "Ica", stock: 70, imagen: "imagenes/uva.png" },
-  { id: 16, nombre: "Mango orgánico", precio: 9.00, unidad: "kg", categoria: "frutas", descripcion: "Mangos dulces y jugosos, cosecha reciente.", origen: "Piura", stock: 50, imagen: "imagenes/mango.png" },
-  { id: 20, nombre: "Granada", precio: 14.00, unidad: "kg", categoria: "frutas", descripcion: "Granadas dulces, llenas de antioxidantes.", origen: "Lima", stock: 35, imagen: "imagenes/granada.png" },
+  { id: 1, nombre: "Manzana Orgánica", precio: 8.50, unidad: "kg", categoria: "frutas", descripcion: "Manzanas dulces y crujientes, cultivadas sin pesticidas.", stock: 50, imagen: "imagenes/manzana.png" },
+  { id: 2, nombre: "Plátano de seda", precio: 4.50, unidad: "kg", categoria: "frutas", descripcion: "Plátanos pequeños, dulces y altos en potasio.", stock: 120, imagen: "imagenes/platano.png" },
+  { id: 5, nombre: "Palta Hass", precio: 12.00, unidad: "kg", categoria: "frutas", descripcion: "Paltas cremosas perfectas para ensaladas.", stock: 30, imagen: "imagenes/palta.png" },
+  { id: 6, nombre: "Fresa orgánica", precio: 18.00, unidad: "kg", categoria: "frutas", descripcion: "Fresas rojas y jugosas, cosecha reciente.", stock: 45, imagen: "imagenes/fresa.png" },
+  { id: 8, nombre: "Limón sutil", precio: 4.00, unidad: "kg", categoria: "frutas", descripcion: "Limones jugosos, ideales para bebidas y comidas.", stock: 150, imagen: "imagenes/limon.png" },
+  { id: 10, nombre: "Naranja dulce", precio: 5.50, unidad: "kg", categoria: "frutas", descripcion: "Naranjas jugosas, llenas de vitamina C.", stock: 100, imagen: "imagenes/naranja.png" },
+  { id: 14, nombre: "Kiwi orgánico", precio: 15.00, unidad: "kg", categoria: "frutas", descripcion: "Kiwis dulces y ácidos, llenos de vitamina C.", stock: 40, imagen: "imagenes/kiwi.png" },
+  { id: 15, nombre: "Uva borgoña", precio: 12.00, unidad: "kg", categoria: "frutas", descripcion: "Uvas dulces, perfectas para comer frescas o en postres.", stock: 70, imagen: "imagenes/uva.png" },
+  { id: 16, nombre: "Mango orgánico", precio: 9.00, unidad: "kg", categoria: "frutas", descripcion: "Mangos dulces y jugosos, cosecha reciente.", stock: 50, imagen: "imagenes/mango.png" },
+  { id: 20, nombre: "Granada", precio: 14.00, unidad: "kg", categoria: "frutas", descripcion: "Granadas dulces, llenas de antioxidantes.", stock: 35, imagen: "imagenes/granada.png" },
 ];
 
 // VERDURAS 
 const verduras = [
-  { id: 3, nombre: "Zanahoria orgánica", precio: 3.50, unidad: "kg", categoria: "verduras", descripcion: "Zanahorias jugosas, ricas en betacaroteno.", origen: "Arequipa", stock: 85, imagen: "imagenes/zanahoria.png" },
-  { id: 7, nombre: "Tomate riñón", precio: 5.00, unidad: "kg", categoria: "verduras", descripcion: "Tomates rojos, firmes y sabrosos.", origen: "Ica", stock: 90, imagen: "imagenes/tomate.png" },
-  { id: 9, nombre: "Espinaca orgánica", precio: 6.00, unidad: "kg", categoria: "verduras", descripcion: "Espinaca fresca, rica en hierro y vitaminas.", origen: "Lima", stock: 60, imagen: "imagenes/espinaca.png" },
-  { id: 11, nombre: "Pepino orgánico", precio: 4.00, unidad: "kg", categoria: "verduras", descripcion: "Pepinos frescos y crujientes, ideales para ensaladas.", origen: "Lima", stock: 80, imagen: "imagenes/pepino.png" },
-  { id: 12, nombre: "Pimiento rojo", precio: 7.00, unidad: "kg", categoria: "verduras", descripcion: "Pimientos rojos dulces, ricos en vitamina C.", origen: "Ica", stock: 60, imagen: "imagenes/pimientoRojo.png" },
-  { id: 13, nombre: "Brócoli orgánico", precio: 6.50, unidad: "kg", categoria: "verduras", descripcion: "Brócoli fresco, alto en antioxidantes.", origen: "Arequipa", stock: 55, imagen: "imagenes/brocoli.png" },
-  { id: 17, nombre: "Papa nativa", precio: 5.50, unidad: "kg", categoria: "verduras", descripcion: "Papas andinas, variedad autóctona.", origen: "Cusco", stock: 150, imagen: "imagenes/papa.png" },
-  { id: 18, nombre: "Cebolla roja", precio: 3.50, unidad: "kg", categoria: "verduras", descripcion: "Cebollas rojas, ideales para ensaladas y salsas.", origen: "Arequipa", stock: 120, imagen: "imagenes/cebolla.png" }
+  { id: 3, nombre: "Zanahoria orgánica", precio: 3.50, unidad: "kg", categoria: "verduras", descripcion: "Zanahorias jugosas, ricas en betacaroteno.", stock: 85, imagen: "imagenes/zanahoria.png" },
+  { id: 7, nombre: "Tomate riñón", precio: 5.00, unidad: "kg", categoria: "verduras", descripcion: "Tomates rojos, firmes y sabrosos.", stock: 90, imagen: "imagenes/tomate.png" },
+  { id: 9, nombre: "Espinaca orgánica", precio: 6.00, unidad: "kg", categoria: "verduras", descripcion: "Espinaca fresca, rica en hierro y vitaminas.", stock: 60, imagen: "imagenes/espinaca.png" },
+  { id: 11, nombre: "Pepino orgánico", precio: 4.00, unidad: "kg", categoria: "verduras", descripcion: "Pepinos frescos y crujientes, ideales para ensaladas.", stock: 80, imagen: "imagenes/pepino.png" },
+  { id: 12, nombre: "Pimiento rojo", precio: 7.00, unidad: "kg", categoria: "verduras", descripcion: "Pimientos rojos dulces, ricos en vitamina C.", stock: 60, imagen: "imagenes/pimientoRojo.png" },
+  { id: 13, nombre: "Brócoli orgánico", precio: 6.50, unidad: "kg", categoria: "verduras", descripcion: "Brócoli fresco, alto en antioxidantes.", stock: 55, imagen: "imagenes/brocoli.png" },
+  { id: 17, nombre: "Papa nativa", precio: 5.50, unidad: "kg", categoria: "verduras", descripcion: "Papas andinas, variedad autóctona.", stock: 150, imagen: "imagenes/papa.png" },
+  { id: 18, nombre: "Cebolla roja", precio: 3.50, unidad: "kg", categoria: "verduras", descripcion: "Cebollas rojas, ideales para ensaladas y salsas.", stock: 120, imagen: "imagenes/cebolla.png" }
 ];
 
 // GRANOS 
 const granos = [
-  { id: 4, nombre: "Quinua Real", precio: 15.00, unidad: "kg", categoria: "granos", descripcion: "Quinua orgánica de grano grande, alto valor proteico.", origen: "Puno", stock: 200, imagen: "imagenes/quinua.png" },
-  { id: 23, nombre: "Kiwicha", precio: 14.00, unidad: "kg", categoria: "granos", descripcion: "Kiwicha orgánica, rica en calcio y proteínas.", origen: "Cusco", stock: 120, imagen: "imagenes/kiwicha.png" },
-  { id: 24, nombre: "Cañihua", precio: 16.00, unidad: "kg", categoria: "granos", descripcion: "Cañihua orgánica, alto contenido en hierro.", origen: "Puno", stock: 90, imagen: "imagenes/cañihua.png" }
+  { id: 4, nombre: "Quinua Real", precio: 15.00, unidad: "kg", categoria: "granos", descripcion: "Quinua orgánica de grano grande, alto valor proteico.", stock: 200, imagen: "imagenes/quinua.png" },
+  { id: 23, nombre: "Kiwicha", precio: 14.00, unidad: "kg", categoria: "granos", descripcion: "Kiwicha orgánica, rica en calcio y proteínas.", stock: 120, imagen: "imagenes/kiwicha.png" },
+  { id: 24, nombre: "Cañihua", precio: 16.00, unidad: "kg", categoria: "granos", descripcion: "Cañihua orgánica, alto contenido en hierro.", stock: 90, imagen: "imagenes/cañihua.png" }
 ];
 
 // LEGUMBRES 
 const legumbres = [
-  { id: 21, nombre: "Lentejas orgánicas", precio: 9.00, unidad: "kg", categoria: "legumbres", descripcion: "Lentejas ricas en hierro y proteína vegetal.", origen: "Lima", stock: 100, imagen: "imagenes/lentejas.png" },
-  { id: 22, nombre: "Frijol canario", precio: 8.50, unidad: "kg", categoria: "legumbres", descripcion: "Frijoles canarios, suaves y cremosos.", origen: "Junín", stock: 80, imagen: "imagenes/frijol.png" },
-  { id: 25, nombre: "Garbanzo orgánico", precio: 10.00, unidad: "kg", categoria: "legumbres", descripcion: "Garbanzos orgánicos, ideales para guisos y ensaladas.", origen: "Lima", stock: 70, imagen: "imagenes/garbanzo.png" }
+  { id: 21, nombre: "Lentejas orgánicas", precio: 9.00, unidad: "kg", categoria: "legumbres", descripcion: "Lentejas ricas en hierro y proteína vegetal.", stock: 100, imagen: "imagenes/lentejas.png" },
+  { id: 22, nombre: "Frijol canario", precio: 8.50, unidad: "kg", categoria: "legumbres", descripcion: "Frijoles canarios, suaves y cremosos.", stock: 80, imagen: "imagenes/frijol.png" },
+  { id: 25, nombre: "Garbanzo orgánico", precio: 10.00, unidad: "kg", categoria: "legumbres", descripcion: "Garbanzos orgánicos, ideales para guisos y ensaladas.", stock: 70, imagen: "imagenes/garbanzo.png" }
 ];
 
 // FRUTAS SECAS 
 const frutasSecas = [
-  { id: 26, nombre: "Pasas orgánicas", precio: 25.00, unidad: "kg", categoria: "frutas secas", descripcion: "Pasas de uva, dulces y naturales. Venta por kilogramo.", origen: "Ica", stock: 80, imagen: "imagenes/pasas.png" },
-  { id: 27, nombre: "Ciruelas secas", precio: 30.00, unidad: "kg", categoria: "frutas secas", descripcion: "Ciruelas deshidratadas, ricas en fibra.", origen: "Lima", stock: 60, imagen: "imagenes/ciruelasSecas.png" },
-  { id: 28, nombre: "Higos secos", precio: 35.00, unidad: "kg", categoria: "frutas secas", descripcion: "Higos orgánicos deshidratados, dulces y nutritivos.", origen: "Arequipa", stock: 45, imagen: "imagenes/higosSecos.png" },
-  { id: 29, nombre: "Nueces peladas", precio: 45.00, unidad: "kg", categoria: "frutas secas", descripcion: "Nueces frescas, ricas en Omega-3.", origen: "Cajamarca", stock: 70, imagen: "imagenes/nuecesPeladas.png" }
+  { id: 26, nombre: "Pasas orgánicas", precio: 25.00, unidad: "kg", categoria: "frutas secas", descripcion: "Pasas de uva, dulces y naturales. Venta por kilogramo.", stock: 80, imagen: "imagenes/pasas.png" },
+  { id: 27, nombre: "Ciruelas secas", precio: 30.00, unidad: "kg", categoria: "frutas secas", descripcion: "Ciruelas deshidratadas, ricas en fibra.", stock: 60, imagen: "imagenes/ciruelasSecas.png" },
+  { id: 28, nombre: "Higos secos", precio: 35.00, unidad: "kg", categoria: "frutas secas", descripcion: "Higos orgánicos deshidratados, dulces y nutritivos.", stock: 45, imagen: "imagenes/higosSecos.png" },
+  { id: 29, nombre: "Nueces peladas", precio: 45.00, unidad: "kg", categoria: "frutas secas", descripcion: "Nueces frescas, ricas en Omega-3.", stock: 70, imagen: "imagenes/nuecesPeladas.png" }
 ];
 
 //  UNIR TODOS LOS PRODUCTOS  
